@@ -1,0 +1,41 @@
+def countSort(list, position):
+    length = len(list)
+    result = [0] * length
+    calculate = [0] * 10
+
+    #  counting of elements
+    for i in range(0, length):
+        index = list[i] // position
+        calculate[index % 10] += 1
+
+    #  cummulative count
+    for i in range(1, 10):
+        calculate[i] += count[i - 1]
+
+    
+    i = length - 1
+    while i >= 0:
+        index = list[i] // position
+        result[count[index % 10] - 1] = list[i]
+        calculate[index % 10] -= 1
+        i -= 1
+
+    for i in range(0, size):
+        array[i] = output[i]
+
+
+
+def radixSort(list):
+    
+    max_element = max(list)
+
+    
+    position = 1
+    while max_element // place > 0:
+        countSort(list, position)
+        position *= 10
+
+
+info = [11, 32, 56, 23, 14, 45, 78]
+radixSort(info)
+print(info)
